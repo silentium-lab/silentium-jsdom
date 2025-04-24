@@ -1,0 +1,2 @@
+import{JSDOM as o}from"jsdom";import{value as t,guestCast as e,give as n,sourceChangeable as m,sourceAll as r,patron as i}from"silentium";const d=(m="")=>r=>{t(m,e(r,(t=>{n(new o(`<!DOCTYPE html><body>${t}</body></html>`).window.document,r)})))},c=(o,e)=>{const n=m(),d=r([o,e]);return t(d,i((([o,t])=>{const e=o.createElement("div");e.innerHTML=t,n.give(e.children[0])}))),n};export{c as jsDomElement,d as jsdomDocument};
+//# sourceMappingURL=silentium-jsdom.min.mjs.map

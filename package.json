@@ -1,0 +1,60 @@
+{
+  "name": "silentium-jsdom",
+  "author": "Silentium Lab",
+  "license": "MIT",
+  "description": "Wrapper around jsdom compatible with silentium",
+  "version": "0.0.0",
+  "private": false,
+  "type": "module",
+  "main": "dist/silentium-jsdom.js",
+  "module": "dist/silentium-jsdom.mjs",
+  "typings": "dist/silentium-jsdom.d.ts",
+  "keywords": [
+    "jsdom"
+  ],
+  "scripts": {
+    "build": "rollup -c",
+    "build-doc": "./docs/build.sh",
+    "lint": "eslint src",
+    "lint-fix": "eslint src --fix",
+    "test": "vitest run",
+    "test:watch": "vitest watch",
+    "cz": "git add . && git cz",
+    "push-head": "git push origin HEAD",
+    "test-debug": "env DEBUG=app:* vitest",
+    "release": "./beforeRelease.sh && npm run build && standard-version --no-verify && git push --follow-tags && npm publish",
+    "prepare": "husky"
+  },
+  "dependencies": {
+    "silentium": "^0.0.13",
+    "jsdom": "^26.0.0"
+  },
+  "devDependencies": {
+    "@eslint/eslintrc": "^3.1.0",
+    "@eslint/js": "^9.12.0",
+    "@rollup/plugin-terser": "^0.4.4",
+    "@types/jsdom": "^21.1.7",
+    "@typescript-eslint/eslint-plugin": "^8.8.1",
+    "@typescript-eslint/parser": "^8.8.1",
+    "cz-customizable": "^7.0.0",
+    "esbuild": "^0.25.1",
+    "eslint": "^9.12.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-prettier": "^5.2.1",
+    "husky": "^9.1.7",
+    "prettier": "3.3.3",
+    "rollup": "^4.24.0",
+    "rollup-plugin-dts": "^6.1.1",
+    "rollup-plugin-esbuild": "^6.1.1",
+    "standard-version": "^9.5.0",
+    "vitest": "^3.0.9"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-customizable"
+    },
+    "cz-customizable": {
+      "config": "./commitizen.cjs"
+    }
+  }
+}
