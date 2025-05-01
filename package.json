@@ -3,7 +3,7 @@
   "author": "Silentium Lab",
   "license": "MIT",
   "description": "Wrapper around jsdom compatible with silentium",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "private": false,
   "type": "module",
   "main": "dist/silentium-jsdom.js",
