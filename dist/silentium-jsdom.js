@@ -1,15 +1,16 @@
 import { JSDOM } from 'jsdom';
 import { value, guestCast, give, sourceChangeable, sourceAll, patron } from 'silentium';
 
-const jsdomDocument = (body = "") => {
+const jsdomDocument = (body = "", domGuest) => {
   return (g) => {
     value(
       body,
       guestCast(g, (body2) => {
-        give(
-          new JSDOM(`<!DOCTYPE html><body>${body2}</body></html>`).window.document,
-          g
-        );
+        const dom = new JSDOM(`<!DOCTYPE html><body>${body2}</body></html>`);
+        if (domGuest) {
+          give(dom, domGuest);
+        }
+        give(dom.window.document, g);
       })
     );
   };

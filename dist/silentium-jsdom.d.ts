@@ -1,10 +1,11 @@
+import { JSDOM } from 'jsdom';
 import * as silentium from 'silentium';
-import { SourceType } from 'silentium';
+import { SourceType, GuestType } from 'silentium';
 
 /**
  * Helps to get Document from html string
  */
-declare const jsdomDocument: (body?: SourceType<string>) => SourceType<Document>;
+declare const jsdomDocument: (body?: SourceType<string>, domGuest?: GuestType<JSDOM>) => SourceType<Document>;
 
 /**
  * Helps to get HTMLElement from html string

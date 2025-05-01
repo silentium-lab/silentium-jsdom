@@ -3,15 +3,16 @@
 var jsdom = require('jsdom');
 var silentium = require('silentium');
 
-const jsdomDocument = (body = "") => {
+const jsdomDocument = (body = "", domGuest) => {
   return (g) => {
     silentium.value(
       body,
       silentium.guestCast(g, (body2) => {
-        silentium.give(
-          new jsdom.JSDOM(`<!DOCTYPE html><body>${body2}</body></html>`).window.document,
-          g
-        );
+        const dom = new jsdom.JSDOM(`<!DOCTYPE html><body>${body2}</body></html>`);
+        if (domGuest) {
+          silentium.give(dom, domGuest);
+        }
+        silentium.give(dom.window.document, g);
       })
     );
   };
