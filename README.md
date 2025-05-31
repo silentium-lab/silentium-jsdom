@@ -7,7 +7,6 @@
 <br/>
 <p align="center">
   <a href="https://npmjs.com/package/silentium-web-api"><img src="https://img.shields.io/npm/v/silentium-web-api.svg" alt="npm package"></a>
-  <a href="https://github.com/silentium-lab/silentium-web-api/actions/workflows/node.js.yml"><img src="https://github.com/silentium-lab/silentium-web-api/actions/workflows/node.js.yml/badge.svg" alt="build status"></a>
 </p>
 <br/>
 
