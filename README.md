@@ -6,7 +6,7 @@
 <h1 align="center">Silentium JsDOM</h1>
 <br/>
 <p align="center">
-  <a href="https://npmjs.com/package/silentium-web-api"><img src="https://img.shields.io/npm/v/silentium-web-api.svg" alt="npm package"></a>
+  <a href="https://npmjs.com/package/silentium-jsdom"><img src="https://img.shields.io/npm/v/silentium-jsdom.svg" alt="npm package"></a>
 </p>
 <br/>
 
